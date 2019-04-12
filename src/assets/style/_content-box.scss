@@ -1,0 +1,16 @@
+// Used to wrap content inside a nice box.
+
+
+
+.content-box {
+	
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 1rem;
+	@media (min-width: 960px) {
+		max-width: var(--content-width-md);
+	}
+	@media (min-width: 1200px) {
+		max-width: var(--content-width-lg);
+	}
+}

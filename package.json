@@ -1,0 +1,25 @@
+{
+  "name": "gridsome-blog",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "create:content": "node scripts/createPosts.js"
+  },
+  "dependencies": {
+    "@gridsome/plugin-google-analytics": "^0.1.0",
+    "@gridsome/remark-prismjs": "^0.0.4",
+    "@gridsome/source-filesystem": "^0.3.0",
+    "@gridsome/transformer-remark": "^0.2.0",
+    "date-format-lite": "^17.7.0",
+    "gridsome": "^0.5.0"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "fs-extra": "^7.0.1",
+    "lorem-ipsum": "^2.0.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0"
+  }
+}
