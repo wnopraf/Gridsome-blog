@@ -5,19 +5,20 @@
       <span class="author">{{post.author}}</span>
       <span class="date">{{post.date}}</span>
     </div>
-    <div class="slug">{{post.slug}}</div>
+    <Tags :tags="post.tags" />
+    <h1 class="slug">{{post.slug}}</h1>
     <div class="content" v-html="post.content"></div>
-    <div class="post__tags">
-      <span v-for="(tag, index) in post.tags" :key="index" class="post__tag">
-        <g-link :to="tag.path">{{tag.title}}</g-link>
-      </span>
-    </div>
+    
   </div>
 </template>
 
 <script>
+import Tags from './Tags.vue'
 export default {
-  props: ["post"]
+  props: ["post"],
+  components: {
+    Tags
+  }
 };
 </script>
 

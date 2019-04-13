@@ -9,19 +9,18 @@
     <div class="post-view__date">{{post.date}}</div>
     <h3 class="post-view__slug">{{post.slug}}</h3>
     <p class="post-view__excerpt">{{post.excerpt}}</p>
-    <div class="post-view__tags" v-if="post.tags">
-      <span>tags</span>
-      <span class="post-view__tag" v-for="(tag, index) in post.tags" :key="index">
-        <g-link :to="tag.path">{{tag.title}}</g-link>
-      </span>
-    </div>
+    <Tags :tags="post.tags"/>
     <g-link :to="post.path" class="post-view__link">view post</g-link>
   </div>
 </template>
 
 <script>
+import Tags from "./Tags.vue";
 export default {
-  props: ["post"]
+  props: ["post"],
+  components: {
+    Tags
+  }
 };
 </script>
 
@@ -69,11 +68,10 @@ export default {
   background-color: rgb(44, 181, 123);
   color: white;
   font-weight: 600;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
   &:hover {
-      background-color: rgb(2, 168, 91);
-      opacity: 1;
+    background-color: rgb(2, 168, 91);
+    opacity: 1;
   }
 }
-
 </style>
