@@ -6,8 +6,9 @@
       </div>
       <div class="post-info__author">{{post.author}}</div>
     </div>
-    <div class="post-view__date">{{post.date}}</div>
+    
     <h3 class="post-view__slug">{{post.slug}}</h3>
+    <div class="post-view__date">{{post.date}}</div>
     <p class="post-view__excerpt">{{post.excerpt}}</p>
     <Tags :tags="post.tags"/>
     <g-link :to="post.path" class="post-view__link">view post</g-link>
@@ -41,31 +42,22 @@ export default {
   }
 }
 .post-view__date {
-  font-size: 0.5em;
+  font-size: 0.75em;
 }
 .post-view__slug {
-  margin: 1rem 0;
+  margin: 1rem 0 .3rem 0;
 }
-.post-view__tags {
-  span:first-child {
-    text-transform: capitalize;
-    font-weight: 900;
-    margin-right: 1rem;
-  }
-  .post-view__tag a {
-    font-weight: 600;
-    padding: 0.75rem;
-    background-color: #4cc8f1;
-    margin-right: 1rem;
-    color: #4d4c4c;
-  }
+.post-view__excerpt {
+  margin-top: 1rem;
 }
+
+
 .post-view__link {
   display: inline-block;
   margin-top: 2rem;
   padding: 0.6rem;
   border-radius: 25px;
-  background-color: rgb(44, 181, 123);
+  background-color: var(--view-post-button-bg-color);
   color: white;
   font-weight: 600;
   transition: background-color 0.5s;

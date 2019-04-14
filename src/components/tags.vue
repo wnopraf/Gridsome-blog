@@ -19,14 +19,18 @@ export default {
     text-transform: capitalize;
     font-weight: 900;
     margin-right: 1rem;
+    display: inline-block;
+    padding: .35rem;
+    background: var(--links-bg-color);
+    color: white;
   }
   .post-view__tag a {
     display: inline-block;
     font-weight: 600;
-    padding: 0.75rem;
-    background-color: #4cc8f1;
+    padding: 0.35rem;
+    background-color: var(--tags-bg-color);
     margin-right: 1rem;
-    color: #4d4c4c;
+    color: white;
   }
 }
 </style>

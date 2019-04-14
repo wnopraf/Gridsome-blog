@@ -1,15 +1,15 @@
 <template>
   <Layout :show-logo="false">
     <div class="tag" v-if="tag">
-      {{tag.title}}
-      <a href @click.prevent="$router.back()">&#128072; Back</a>
-      <a href="" @click="$router.push('/')">Daily posts</a>
+      <span class="tag__name">{{tag.title}}</span>
+      <a href class="retro-link" @click.prevent="$router.back()">&#128072; Back</a>
+      <a href class="retro-link" @click="$router.push('/')">Daily posts</a>
     </div>
     <div class="posts">
       <PostInfo v-for="edge in posts.edges" :key="edge.node.id" :post="edge.node"/>
     </div>
     <div class="paginate">
-      <Pager :info="posts.pageInfo"/>
+      <Pager :info="posts.pageInfo" linkClass="retro-link"/>
     </div>
   </Layout>
 </template>
@@ -34,13 +34,23 @@ export default {
 <style lang="scss" >
 .paginate {
   text-align: center;
-  a {
+}
+.tag__name {
+  display: inline-block;
+    font-weight: 600;
+    padding: 0.75rem;
+    background-color: var(--tags-bg-color);
+    margin-right: 1rem;
+    color: white;
+}
+.retro-link {
     display: inline-block;
     padding: .6rem;
     margin: 0 .3rem;
     font-weight: 600;
-    background-color: rgb(243, 173, 45);
+    background-color: var(--links-bg-color);
     color: white;
+    border-radius: 10px;
   }
-}
+
 </style>

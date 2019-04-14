@@ -30,6 +30,7 @@ query ($id: String ,$page: Int) {
           path
           avatar
           author
+          slug
         }
       }   
       }
