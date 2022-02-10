@@ -19,7 +19,7 @@
     "faker": "^4.1.0",
     "fs-extra": "^7.0.1",
     "lorem-ipsum": "^2.0.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^7.1.0"
   }
 }
